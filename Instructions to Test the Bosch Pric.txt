@@ -1,0 +1,52 @@
+Instructions to Test the Bosch Pricing Optimization Model:
+Open Postman (or any API testing tool you prefer).
+
+Create a New Request:
+
+Choose the method POST.
+
+Enter the following URL into the request URL field:
+
+arduino
+Copy
+Edit
+http://3.12.153.160:5000/predict
+Set the Request Headers:
+
+In the "Headers" tab, add the following header:
+
+Key: Content-Type
+
+Value: application/json
+
+Add the Request Body:
+
+In the "Body" tab, select raw and JSON format.
+
+Paste the following JSON into the body:
+
+json
+Copy
+Edit
+{
+  "Base_Price": 199.99,
+  "Competitor_Price": 189.99,
+  "Customer_Rating": 4.3,
+  "Demand_Elasticity": 1.1,
+  "Seasonality": 0.8,
+  "Marketing_Spend": 5000.0
+}
+Send the Request:
+
+Click on the Send button in Postman.
+
+Check the Response:
+
+You should receive a response like this:
+
+json
+Copy
+Edit
+{
+  "predicted_sales_volume": 3247.11
+}
